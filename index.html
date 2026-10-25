@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Cheol Park is a Staff Research Engineer at Waymo working on foundation models, reinforcement learning, and multi-agent planning for self-driving.">
+  <title>Cheol Park — Staff Research Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f6f2;
+      --ink: #20211f;
+      --muted: #74766e;
+      --line: #deded6;
+      --accent: #c24b2e;
+      --content: 1000px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; font-size: 19.5px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration-color: #bcbcb3; text-underline-offset: 4px; }
+    a:hover { color: var(--accent); text-decoration-color: currentColor; }
+    .wrap { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .topbar { position: sticky; top: 0; z-index: 5; background: rgb(247 246 242 / 92%); backdrop-filter: blur(14px); border-bottom: 1px solid rgb(222 222 214 / 75%); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 20px; }
+    .nav-links { display: flex; gap: 25px; align-items: center; margin-left: auto; color: var(--muted); font-size: 19.5px; }
+    .nav-links a { text-decoration: none; }
+    .hero { display: grid; grid-template-columns: 1fr 252px; align-items: center; gap: 42px; padding: 78px 0 68px; }
+    .eyebrow, .section-label, .date, .tag { font-family: "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+    .eyebrow { color: var(--accent); font-size: 16px; margin: 0 0 20px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 15px; font-family: Manrope, sans-serif; font-size: clamp(25px, 3.36vw, 36px); line-height: 1.08; letter-spacing: -.055em; font-weight: 500; }
+    .role { color: #595d51; font-size: 21.5px; font-weight: 600; line-height: 1.45; margin-bottom: 16px; }
+    .intro { max-width: 625px; color: #565850; line-height: 1.85; margin-bottom: 24px; }
+    .intro strong { color: var(--ink); font-weight: 600; }
+    .links { display: flex; gap: 19px; flex-wrap: wrap; font-weight: 600; }
+    .links a { text-decoration: none; }
+    .portrait-frame { position: relative; width: 252px; height: 252px; box-sizing: border-box; padding: 6px; overflow: hidden; border: 1px solid var(--line); border-radius: 50%; }
+    .portrait-frame::after { position: absolute; content: ""; inset: 4px -5px -5px 4px; border: 1px solid #e9c8b9; border-radius: 50%; z-index: -1; }
+    .portrait { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 39%; border-radius: 50%; filter: saturate(.82); }
+    .photo-note { margin: 12px 0 0; text-align: center; color: var(--muted); font-family: "DM Mono", monospace; letter-spacing: .04em; }
+    section { border-top: 1px solid var(--line); padding: 56px 0; }
+    .section-head { display: grid; grid-template-columns: 170px 1fr; gap: 22px; margin-bottom: 25px; }
+    .section-label { margin: 6px 0 0; color: var(--accent); font-size: 16px; }
+    .section-title { font: 600 24px Manrope, sans-serif; letter-spacing: -.04em; margin: 0; }
+    .section-copy { max-width: 670px; color: #565850; margin: 10px 0 0; }
+    .focus-grid { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; margin-top: 20px; }
+    .focus-card { min-height: 110px; padding: 17px 18px; border: 1px solid var(--line); border-radius: 5px; background: rgb(255 255 255 / 35%); }
+    .focus-card b { display: block; font: 700 15.5px Manrope, sans-serif; margin-bottom: 6px; }
+    .focus-card span { color: var(--muted); line-height: 1.6; }
+    .timeline { grid-column: 2; margin-top: 14px; }
+    .job { display: grid; grid-template-columns: 1fr auto; gap: 8px 22px; padding: 18px 0; border-top: 1px solid var(--line); }
+    .job:first-child { border-top: 0; padding-top: 2px; }
+    .job h3 { margin: 0; font: 700 18px Manrope, sans-serif; letter-spacing: -.02em; }
+    .job .date { align-self: start; color: var(--muted); font-size: 16px; white-space: nowrap; }
+    .company { margin: 3px 0 0; color: var(--accent); }
+    .job ul { grid-column: 1 / -1; margin: 5px 0 0; padding-left: 18px; color: #565850; }
+    .job li { padding-left: 3px; margin: 5px 0; }
+    .pub { display: grid; grid-template-columns: 220px 1fr auto; gap: 8px 22px; align-items: start; padding: 22px 0; border-top: 1px solid var(--line); }
+    .pub:first-of-type { border-top: 0; padding-top: 2px; }
+    .pub img { grid-column: 1; grid-row: 1 / span 2; display: block; width: 220px; height: 148px; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 3px; }
+    .pub h3 { grid-column: 2; grid-row: 1; margin: 0; font-family: Manrope, sans-serif; font-size: 18px; font-weight: 700; line-height: 1.45; letter-spacing: -.025em; }
+    .pub h3 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .pub h3 a:hover { color: var(--accent); }
+    .pub .date { grid-column: 3; grid-row: 1; color: var(--muted); font-size: 16px; padding-top: 3px; }
+    .pub p { grid-column: 2 / 4; grid-row: 2; color: #6a6c64; font-size: 15px; line-height: 1.55; margin: 0; }
+    .venue { color: var(--accent); }
+    .education-row { grid-column: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .school { padding: 15px 0; border-top: 1px solid var(--line); }
+    .school b { font: 700 15.5px Manrope, sans-serif; }
+    .school span { display: block; color: var(--muted); margin-top: 3px; }
+    .skills { grid-column: 2; display: grid; grid-template-columns: 105px 1fr; gap: 10px 16px; }
+    .skills b { color: #42443e; }
+    .skills span { color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 23px 0 34px; color: var(--muted); }
+    footer .wrap { display: flex; justify-content: space-between; gap: 15px; }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 36px, var(--content)); }
+      .nav { min-height: 58px; }
+      .nav-links { gap: 13px; font-size: 19.5px; }
+      .hero { grid-template-columns: 1fr 190px; gap: 18px; padding: 62px 0 53px; }
+      .portrait-frame { width: 190px; height: 190px; padding: 5px; }
+      .section-head { grid-template-columns: 1fr; gap: 9px; }
+      .focus-grid, .timeline, .education-row, .skills { grid-column: 1; }
+      .focus-grid { grid-template-columns: 1fr; }
+      .focus-card { min-height: auto; }
+      .pub { grid-template-columns: 135px 1fr auto; gap: 7px 12px; }
+      .pub img { width: 135px; height: 104px; }
+      .pub h3 { font-size: 16px; }
+      section { padding: 40px 0; }
+    }
+    @media (max-width: 440px) {
+      .nav-links { gap: 9px; font-size: 19.5px; }
+      .nav-links a:nth-child(2) { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .portrait-frame { grid-row: 1; width: 163px; height: 163px; justify-self: end; margin-bottom: -25px; }
+      .hero-copy { grid-row: 2; }
+      .eyebrow { margin-bottom: 12px; }
+      .education-row { grid-template-columns: 1fr; }
+      footer .wrap { display: block; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#publications">Publications</a>
+      </div>
+    </nav>
+  </header>
+  <main id="home" class="wrap">
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Staff Research Engineer · Mountain View, CA</p>
+        <h1>Cheol Park</h1>
+        <p class="role">Developing foundation models for self-driving.</p>
+        <p class="intro">I’m a staff research engineer at <a href="https://www.waymo.com">Waymo</a>, where I develop foundation models for self-driving, including supervised fine-tuning (SFT) and reinforcement learning (RL) of large language models for long-tail scenarios. My work spans multimodal world models, multi-agent prediction, and planning. Earlier, at Google, I worked on machine learning models for human detection and tracking, user modeling, spam detection, and semantic search. I received my Ph.D. in Electrical Engineering and Computer Science from KAIST, advised by <a href="https://ieeexplore.ieee.org/author/37087302981">Daeyeon Park</a> and <a href="https://ieeexplore.ieee.org/author/37281165700">Kyu Ho Park</a>.</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/cheolpark/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://scholar.google.com/scholar?q=Cheolho+Park+autonomous+driving" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+        </div>
+      </div>
+      <div>
+        <div class="portrait-frame"><img class="portrait" src="assets/cheol-park.jpg?v=2" alt="Updated portrait of Cheol Park" width="1000" height="1000"></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-head">
+        <p class="section-label">01 / About</p>
+        <div>
+          <h2 class="section-title">Research interests</h2>
+          <p class="section-copy">My research interests include agentic autosearch, reinforcement learning, supervised fine-tuning, multimodal foundation models, and world models. I focus on applying these methods to long-tail scenarios in autonomous driving.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <p class="section-label">02 / Experience</p>
+        <div>
+          <h2 class="section-title">Experience</h2>
+          <div class="timeline">
+            <article class="job">
+              <div><h3>Staff Research Engineer</h3><p class="company">Waymo · Mountain View, CA</p></div><span class="date">AUG 2022 — PRESENT</span>
+              <ul>
+                <li>Fine-tuned LLM models with reasoning-trace supervised fine-tuning and reinforcement learning, using it as a semantic teacher for long-tail driving scenarios.</li>
+                <li>Developed foundation models for self-driving planning and simulation by adapting LLM models.</li>
+                <li>Developed multimodal world models for self-driving.</li>
+                <li>Built a custom KV-cache library to support specialized attention patterns for multi-agent prediction and planning.</li>
+              </ul>
+            </article>
+            <article class="job">
+              <div><h3>Senior Research Engineer &amp; Tech Lead</h3><p class="company">Waymo · Mountain View, CA</p></div><span class="date">JAN 2017 — JUL 2022</span>
+              <ul>
+                <li>Led a cross-functional team to bring the first transformer-based autoregressive planning model into production.</li>
+                <li>Developed an inverse reinforcement learning (IRL)-based traffic simulator and graph-based multi-agent behavior prediction models.</li>
+                <li>Built LiDAR- and camera-based lane detection models, improving precision by 27% at the same recall.</li>
+                <li>Created a siren-labeling pipeline, raw-audio detection models, and an evaluation system, improving validation loss by 35% and recall by 41% at the same precision.</li>
+              </ul>
+            </article>
+            <article class="job">
+              <div><h3>Senior Research Engineer</h3><p class="company">Google · Mountain View, CA</p></div><span class="date">OCT 2008 — DEC 2016</span>
+              <ul>
+                <li>Built human detection and tracking models for YouTube.</li>
+                <li>Developed user interest and location models for Google Search and Maps.</li>
+                <li>Worked on ads spam detection, semantic search, and Android TV search.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <p class="section-label">03 / Publications</p>
+        <div>
+          <h2 class="section-title">Selected publications</h2>
+          <p class="section-copy" style="margin-bottom:20px">Selected papers on world simulation, motion prediction, and interactive multi-agent modeling.</p>
+          <article class="pub"><img src="assets/papers/world-simulation.jpg" alt="Schematic of image, video, and geometric perception signals feeding a world model"><h3><a href="https://openreview.net/forum?id=dgb4rfPzaw" target="_blank" rel="noreferrer">World-Simulation as Pre-Training for Scalable Perception</a></h3><span class="date">2026</span><p>H. Xiang, Z. Leng, A. Zhu, K. Chen, M. Li, X. Chen, Y. Li, T. He, Y. Liang, J. Yao, Y. Xu, A. Subramanian, <strong>Cheolho Park</strong>, R. Xu, D. Anguelov, M. Tan. <span class="venue">Accepted at IROS.</span></p></article>
+          <article class="pub"><img src="assets/papers/motiondiffuser.jpg" alt="MotionDiffuser figure showing guided and unguided multi-agent trajectory predictions"><h3><a href="https://arxiv.org/abs/2306.03083" target="_blank" rel="noreferrer">MotionDiffuser: Controllable Multi-Agent Motion Prediction Using Diffusion</a></h3><span class="date">2023</span><p>C. Jiang, A. Cornman, <strong>Cheolho Park</strong>, B. Sapp, Y. Zhou, D. Anguelov. <span class="venue">CVPR.</span></p></article>
+          <article class="pub"><img src="assets/papers/jfp.jpg" alt="JFP paper figure illustrating joint multi-agent trajectory prediction"><h3><a href="https://arxiv.org/abs/2212.08710" target="_blank" rel="noreferrer">JFP: Joint Future Prediction with Interactive Multi-Agent Modeling for Autonomous Driving</a></h3><span class="date">2023</span><p><strong>Cheolho Park</strong>*, W. Luo*, A. Cornman, B. Sapp, D. Anguelov. <span class="venue">Conference on Robot Learning (CoRL).</span> *Equal contribution.</p></article>
+          <article class="pub"><img src="assets/papers/coordinate-frame.jpg" alt="Diagram comparing agent-centric teacher predictions with a scene-centric student model"><h3><a href="https://arxiv.org/abs/2206.03970" target="_blank" rel="noreferrer">Narrowing the Coordinate-Frame Gap in Behavior Prediction Models: Distillation for Efficient and Accurate Scene-Centric Motion Forecasting</a></h3><span class="date">2022</span><p>D. J. A. Su, B. Douillard, A. R. Al-Rfou, <strong>Cheolho Park</strong>, B. Sapp. <span class="venue">ICRA.</span></p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer><div class="wrap"><span>© 2026 Cheol Park</span><span>Foundation models · Embodied AI</span></div></footer>
+</body>
+</html>
